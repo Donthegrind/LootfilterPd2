@@ -1,4 +1,4 @@
-//Inspired by: Anirml's Loot filter // Originated from Path of Diablo updated for Pd2 by Lowfyr
+//Inspired by Anirml's Loot filter // Originated from Path of Diablo updated for Pd2 by Lowfyr
 
 
 //Basics
@@ -78,7 +78,7 @@ ItemDisplay[gpb OR gpbs]: %BLUE%+%WHITE%P SAPPHIRE // Perfect Sapphire
 //ItemDisplay[skc OR skcs]: %GRAY%+%WHITE%%NAME% // Chipped Skull
 //ItemDisplay[skf OR skfs]: %GRAY%+%WHITE%%NAME% // Flawed Skull
 ItemDisplay[sku OR skus]: %GRAY%+%WHITE%%NAME% // Skull ("Normal")
-ItemDisplay[skl OR skls]: %GRAY%+%WHITE%SKULL // Flawless Skull
+ItemDisplay[skl OR skls]: %GRAY%+%WHITE%SKULL%DOT-20% // Flawless Skull
 ItemDisplay[skz OR skzs]: %GRAY%+%WHITE%P SKULL%DOT-20% // Perfect Skull
 
 //ItemDisplay[gcy OR gcys]: %YELLOW%+%WHITE%%NAME% // Chipped Topaz
@@ -91,7 +91,7 @@ ItemDisplay[gpy OR gpys]: %YELLOW%+%WHITE%P TOPAZ // Perfect Topaz
 //Append quantity after stacks
 ItemDisplay[GEM>0 QTY>1]: %NAME% %WHITE%x%QTY%%CONTINUE% // Shows the quantity of gems in a stack
 
-//RUNES
+//RUNES 
 //1-16
 ItemDisplay[r01 OR r01s CLVL>86]: %GRAY%%RUNENAME% 
 ItemDisplay[r02 OR r02s CLVL>86]: %GRAY%%RUNENAME% 
@@ -126,14 +126,14 @@ ItemDisplay[r23 OR r23s]: %RED%## %PURPLE%MAL %RED%## %DOT-76%%MAP-0B%%BORDER-50
 //24-33
 ItemDisplay[r24 OR r24s]: %RED%### %PURPLE%IST %RED%### %DOT-76%%MAP-0B%%BORDER-50%
 ItemDisplay[r25 OR r25s]: %RED%#### %PURPLE%GUL %RED%#### %DOT-76%%MAP-0B%%BORDER-50%
-ItemDisplay[r26 OR r26s]: %RED%########## %PURPLE%VEX %RED%########## %DOT-76%%MAP-0B%%BORDER-50%
+ItemDisplay[r26 OR r26s]: %RED%######### %PURPLE%VEX %RED%######### %DOT-76%%MAP-0B%%BORDER-50%
 ItemDisplay[r27 OR r27s]: %RED%########## %PURPLE%OHM %RED%########## %DOT-76%%MAP-0B%%BORDER-50%
 ItemDisplay[r28 OR r28s]: %RED%################ %PURPLE%LO %RED%################ %DOT-76%%MAP-0B%%BORDER-50%
-ItemDisplay[r29 OR r29s]: %RED%################ %PURPLE%SUR %RED%################ %DOT-76%%MAP-0B%%BORDER-50%
-ItemDisplay[r30 OR r30s]: %RED%##################### %PURPLE%BER %RED%#################### %DOT-76%%MAP-0B%%BORDER-50%
-ItemDisplay[r31 OR r31s]: %RED%################## %PURPLE%JAH %RED%################## %DOT-76%%MAP-0B%%BORDER-50%
-ItemDisplay[r32 OR r32s]: %RED%########## %PURPLE%CHAM %RED%########## %DOT-76%%MAP-0B%%BORDER-50%
-ItemDisplay[r33 OR r33s]: %RED%############### %PURPLE%ZOD %RED%############### %DOT-76%%MAP-0B%%BORDER-50%
+ItemDisplay[r29 OR r29s]: %RED%############### %PURPLE%SUR %RED%############### %DOT-76%%MAP-0B%%BORDER-50%
+ItemDisplay[r30 OR r30s]: %RED%#################### %PURPLE%BER %RED%################### %DOT-76%%MAP-0B%%BORDER-50%
+ItemDisplay[r31 OR r31s]: %RED%################# %PURPLE%JAH %RED%################# %DOT-76%%MAP-0B%%BORDER-50%
+ItemDisplay[r32 OR r32s]: %RED%######### %PURPLE%CHAM %RED%######### %DOT-76%%MAP-0B%%BORDER-50%
+ItemDisplay[r33 OR r33s]: %RED%############## %PURPLE%ZOD %RED%############## %DOT-76%%MAP-0B%%BORDER-50%
 
 //Append quantity after stacks
 ItemDisplay[RUNE>0 QTY>0]: %NAME% %WHITE%x%QTY%%CONTINUE% 	
@@ -320,8 +320,8 @@ ItemDisplay[RARE (7tk OR 7bk OR 9tk OR 9bk OR tkf OR bkf) !ETH !ID]: %YELLOW%%NA
 ItemDisplay[RARE (7tk OR 7bk OR 9tk OR 9bk OR tkf OR bkf) ETH !ID]: ETH %YELLOW%%NAME%
 
 //Throwing LLD IMBUE
-ItemDisplay[NORM (7tk OR 7bk OR 9tk OR 9bk OR tkf OR bkf) !ETH !ID]: %YELLOW%%NAME%
-ItemDisplay[NORM (7tk OR 7bk OR 9tk OR 9bk OR tkf OR bkf) ETH !ID]: ETH %YELLOW%%NAME%
+//ItemDisplay[NORM (7tk OR 7bk OR 9tk OR 9bk OR tkf OR bkf) !ETH !ID]: %YELLOW%%NAME%
+//ItemDisplay[NORM (7tk OR 7bk OR 9tk OR 9bk OR tkf OR bkf) ETH !ID]: ETH %YELLOW%%NAME%
 
 ItemDisplay[ILVL>0 ILVL<34 NORM RARE !ID (ARMOR OR WEAPON)]: %NAME%
 //RARES (Norm nonclass items hidden)
@@ -2348,11 +2348,11 @@ ItemDisplay[7gl ETH !RW NMAG ED=15]: %GRAY%ETH %NAME%%BLUE% +15%ED %RED%[%SOCKET
 //Harpoon LLD Imbue ETH
 ItemDisplay[9ts ETH !RW NMAG]: %WHITE%%NAME%%BLUE% imbueLLD %GRAY%ETH
 //Harpoon LLD Imbue
-ItemDisplay[9ts !RW NMAG]: %WHITE%%NAME%%BLUE% imbueLLD
+//ItemDisplay[9ts !RW NMAG]: %WHITE%%NAME%%BLUE% imbueLLD
 //T-Spear LLD Imbue ETH
 ItemDisplay[tsp ETH !RW NMAG]: %WHITE%%NAME%%BLUE% imbueLLD %GRAY%ETH
 //T-Spear LLD Imbue
-ItemDisplay[tsp !RW NMAG]: %WHITE%%NAME%%BLUE% imbueLLD
+//ItemDisplay[tsp !RW NMAG]: %WHITE%%NAME%%BLUE% imbueLLD
 
 //Winged Harpoon Eth +15ED
 ItemDisplay[7ts ETH !RW NMAG ED=15]: %GRAY%ETH %NAME%%BLUE% +15%ED %RED%[%SOCKETS%]
