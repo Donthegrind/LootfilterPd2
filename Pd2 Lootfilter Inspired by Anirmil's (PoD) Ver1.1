@@ -1656,7 +1656,10 @@ ItemDisplay[7wa ETH !RW NMAG SOCK=3]: ETH %NAME% %WHITE%[%SOCKETS%]
 //ItemDisplay[7bt !ETH !RW NMAG ED=15 !SOCK=1]: %GRAY%%NAME%%BLUE% +15%ED %YELLOW%[%SOCKETS%]
 
 //Champion Axe
-ItemDisplay[7ga !ETH !RW NMAG ED=15 !SOCK=1]: %GRAY%%NAME%%BLUE% +15%ED %YELLOW%[%SOCKETS%]
+ItemDisplay[7ga !ETH !RW NMAG !SOCK=0]: %GRAY%%NAME% %YELLOW%[%SOCKETS%]
+ItemDisplay[7ga !ETH !RW NMAG !SOCK=4]: %GRAY%%NAME% %YELLOW%[%SOCKETS%]
+ItemDisplay[7ga !ETH !RW NMAG !SOCK=5]: %GRAY%%NAME% %YELLOW%[%SOCKETS%]
+
 
 //Glorious Axe
 //Glorious Axe +ED
@@ -1936,16 +1939,12 @@ ItemDisplay[7o7 !ETH !RW NMAG ED=15 !SOCK=1]: %GRAY%%NAME%%BLUE% +15%ED %GRAY%[%
 ItemDisplay[7o7 ETH !RW NMAG ED=15 !SOCK=1]: %GRAY%ETH %NAME%%BLUE% +15%ED %GRAY%[%SOCKETS%]
 
 //Colossus Voulge
-//4os
-ItemDisplay[7vo !ETH !RW NMAG SOCK=4]: %dark_green%%NAME% %YELLOW%[%SOCKETS%]%MAP%
 //4os ETH
 ItemDisplay[7vo ETH !RW NMAG SOCK=4]: %dark_green%ETH %NAME% %RED%[%SOCKETS%]%MAP%
 //ETH
 ItemDisplay[7vo ETH !RW NMAG SOCK=0]: %dark_green%ETH %NAME% %RED%[%SOCKETS%]%MAP%
 
 //Thresher
-//4os
-ItemDisplay[7s8 !ETH !RW NMAG SOCK=4]: %dark_green%%NAME% %YELLOW%[%SOCKETS%]%MAP%
 //4os ETH
 ItemDisplay[7s8 ETH !RW NMAG SOCK=4]: %dark_green%ETH %NAME% %PURPLE%[%SOCKETS%]%MAP%
 //5os
@@ -1957,7 +1956,7 @@ ItemDisplay[7s8 ETH !RW NMAG SOCK=0]: %dark_green%ETH %NAME% %PURPLE%[%SOCKETS%]
 
 //Cryptic Axe
 //4os
-ItemDisplay[7pa !ETH !RW NMAG SOCK=4]: %dark_green%%NAME% %YELLOW%[%SOCKETS%]
+/ItemDisplay[7pa !ETH !RW NMAG SOCK=4]: %dark_green%%NAME% %YELLOW%[%SOCKETS%]
 //4os ETH
 ItemDisplay[7pa ETH !RW NMAG SOCK=4]: %dark_green%ETH %NAME% %RED%[%SOCKETS%]%MAP%
 //5os
@@ -1997,9 +1996,9 @@ ItemDisplay[7wc ETH !RW NMAG SOCK=6]: %dark_green%ETH %NAME% %RED%[%SOCKETS%]
 //ETH
 ItemDisplay[7wc ETH !RW NMAG SOCK=0]: %dark_green%ETH %NAME% %PURPLE%[%SOCKETS%]%MAP%
 
-////Daggers////
-//
-//Dagger(hidden)
+//Gull Dagger
+ItemDisplay[dgr UNI !ID !ETH]: %RED%oo %PURPLE%Gull Dagger %RED%oo%MAP%
+ItemDisplay[dgr UNI !ID ETH]: %RED%o %GRAY%[%WHITE%eth%GRAY%] %PURPLE%Gull Dagger %RED%o%MAP%
 
 //Dirk(hidden)
 
@@ -2252,7 +2251,7 @@ ItemDisplay[7br ETH !RW NMAG (SOCK=0 OR SOCK>3) ED=11]: %dark_green%ETH %NAME%%B
 ItemDisplay[7br ETH !RW NMAG (SOCK=0 OR SOCK>3) ED=12]: %dark_green%ETH %NAME%%BLUE% +12%ED %RED%[%SOCKETS%]
 ItemDisplay[7br ETH !RW NMAG (SOCK=0 OR SOCK>3) ED=13]: %dark_green%ETH %NAME%%BLUE% +13%ED %RED%[%SOCKETS%]
 ItemDisplay[7br ETH !RW NMAG (SOCK=0 OR SOCK>3) ED=14]: %dark_green%ETH %NAME%%BLUE% +14%ED %RED%[%SOCKETS%]
-ItemDisplay[7br ETH !RW NMAG SOCK=4]: %GRAY%ETH %NAME% %YELLOW%[%SOCKETS%]
+ItemDisplay[7br ETH !RW NMAG (SOCK=4 OR SOCK=0)]: %GRAY%ETH %NAME% %YELLOW%[%SOCKETS%]
 
 //Ghost Spear +15ED
 //ItemDisplay[7st !ETH !RW NMAG (SOCK=0 OR SOCK>3) ED=14]: %dark_green%%NAME%%BLUE% +14%ED %YELLOW%[%SOCKETS%]
@@ -2398,7 +2397,8 @@ ItemDisplay[(8rx OR 6hx OR 6mx) NMAG SOCK=4]: %NAME% %WHITE%[%SOCKETS%]
 //Crossbow - Hidden
 ItemDisplay[WP10 NMAG ILVL>54]:
 
-ItemDisplay[NMAG (6hb OR 6l7 OR 6lw OR 8hb OR 8l8 OR 8lw OR hbw OR lbb OR lwb OR lbw OR cbw OR swb OR sbb !RW SOCK=4) ]: %dark_green%%NAME% %YELLOW%[%SOCKETS%] // Harmony base (remove// to get all)
+ItemDisplay[NMAG (sbw OR lbw !RW SOCK=4) ]: %dark_green%%NAME% %YELLOW%[%SOCKETS%] // Harmony base (remove // to get base)
+ItemDisplay[NMAG (sbw OR lbw !RW SOCK=3) ]: %dark_green%%NAME% %YELLOW%[%SOCKETS%] // Edge (remove // to get base)
 
 ////Amazon Bows////
 //
@@ -2987,7 +2987,3 @@ ItemDisplay[WP13 NMAG !SK118>2 !SK119>2 !SK114>2 !SK102>2 !SK101>2]:
 ItemDisplay[NMAG ILVL>6 !CL1 !CL2 !CL4 !CL5 !CL6 !WP11 !WP13]:
 ItemDisplay[ETH SOCK>0]: ETH %NAME% [%SOCKETS%]
 ItemDisplay[ETH SOCK=0]: ETH %NAME%
-//ItemDisplay[SOCK>0]: %NAME% [%SOCKETS%]
-//ItemDisplay[NMAG SOCK=0]: %NAME%
-//ItemDisplay[CL1 !ETH NMAG ILVL>6]:
-//ItemDisplay[]: %NAME% [%CODE%]
