@@ -1,6 +1,5 @@
-//    ((__))                   Inspired by Anirml's Loot filter                    ((__))                                                   
-//     (00)        Originated from Path of Diablo updated for Pd2 by Lowfyr         (00)       
-//    (o__o)                                                                       (o__o)
+//Inspired by Anirml's Loot filter                                                    
+//Originated from Path of Diablo updated for Pd2 by Lowfyr                                                                     
 
 //Basics
 //Hide Gold Piles Smaller Than (<) X
@@ -29,11 +28,11 @@ ItemDisplay[mp2 CLVL>19]:
 ItemDisplay[mp3 CLVL>25]:
 
 //Essences (Respec Token)
-ItemDisplay[tes]: %GOLD%Suffering [Andariel]
-ItemDisplay[ceh]: %GOLD%Hatred [Mephisto]
-ItemDisplay[bet]: %GOLD%Terror [Diablo]
-ItemDisplay[fed]: %GOLD%Destruction [Baal]
-ItemDisplay[toa]: %GOLD%Token of Absolution
+ItemDisplay[tes]: %NL%%GOLD%Suffering [Andariel]%NL%
+ItemDisplay[ceh]: %NL%%GOLD%Hatred [Mephisto]%NL%
+ItemDisplay[bet]: %NL%%GOLD%Terror [Diablo]%NL%
+ItemDisplay[fed]: %NL%%GOLD%Destruction [Baal]%NL%
+ItemDisplay[toa]: %NL%%GOLD%Token of Absolution%NL%
 
 //Gems - Hide low gems depending on your character lvl and make gems name shorter
 ItemDisplay[GEM=1 CLVL>14]:
@@ -158,11 +157,11 @@ ItemDisplay[imma]: %NAME%%DOT-80% // Imbue Magic Map (Arcane Orb)
 ItemDisplay[scou]: %NAME%%DOT-80% // Purge Map (Removes Mods and Reverts back to a White Map) (Orb of Destruction)
 
 // Maps
-ItemDisplay[t11]: %NAME% [TA]%MAP-87% // Map
-ItemDisplay[t12]: %NAME% [TZ]%MAP-87% // Map
-ItemDisplay[t13]: %NAME% [TY]%MAP-87% // Map
-ItemDisplay[t14]: %NAME% [TX]%MAP-87% // Map
-ItemDisplay[t15]: %NAME% [T5]%MAP-87% // Map
+ItemDisplay[t11]: %NAME% [TA]%MAP-87% // Sewers of Harrogath Map (not implemented yet)
+ItemDisplay[t12]: %NAME% [TZ]%MAP-87% // Mesa Map (not implemented yet)
+ItemDisplay[t13]: %NAME% [TY]%MAP-87% // Palace Map (not implemented yet)
+ItemDisplay[t14]: %NAME% [TX]%MAP-87% // Ice Caves Map (not implemented yet)
+ItemDisplay[t15]: %NAME% [T5]%MAP-87% // Horazon's Memory Map (not implemented yet)
 ItemDisplay[t16]: %NAME% [T1]%MAP-87% // Ruins of Viz-jun
 ItemDisplay[t17]: %NAME% [T3]%MAP-87% // River of Blood
 ItemDisplay[t18]: %NAME% [T2]%MAP-87% // Lava Map
@@ -305,18 +304,23 @@ ItemDisplay[RARE (7tk OR 7bk OR 9tk OR 9bk OR tkf OR bkf) ETH !ID]: ETH %YELLOW%
 
 //Crown 3os
 Itemdisplay[NMAG crn !ETH SOCK=3]: %YELLOW%%NAME% %BLUE%LLD %RED%[%SOCKETS%]
+Itemdisplay[NMAG crn !ETH ED>10 SOCK=3]: %YELLOW%%NAME% %BLUE%LLD ED %PURPLE%[%SOCKETS%]
 
 //Targe +ED +AR
-ItemDisplay[NMAG pa1 ED=<50 AR=<99 !ETH SOCK=0]: %YELLOW%%NAME% %BLUE%LLD %RED%[%SOCKETS%]
-ItemDisplay[NMAG pa1 ED=<50 AR=<99 !ETH SOCK=4]: %YELLOW%%NAME% %BLUE%LLD %PURPLE%[%SOCKETS%]
+ItemDisplay[NMAG pa1 ED=>50 AR=>99 !ETH SOCK=0]: %YELLOW%%NAME% %BLUE%LLD %RED%[%SOCKETS%]
+ItemDisplay[NMAG pa1 ED=>50 AR=>99 !ETH SOCK=4]: %YELLOW%%NAME% %BLUE%LLD %PURPLE%[%SOCKETS%]
 
 //Aerin Shield +ED +AR 
-ItemDisplay[NMAG pa4 ED=<50 AR=<99 !ETH SOCK=0]: %YELLOW%%NAME% %BLUE%LLD %RED%[%SOCKETS%]
-ItemDisplay[NMAG pa4 ED=<50 AR=<99 !ETH SOCK=4]: %YELLOW%%NAME% %BLUE%LLD %PURPLE%[%SOCKETS%]
+ItemDisplay[NMAG pa4 ED>50 AR>99 !ETH SOCK=0]: %YELLOW%%NAME% %BLUE%LLD %RED%[%SOCKETS%]
+ItemDisplay[NMAG pa4 ED>50 AR>99 !ETH SOCK=4]: %YELLOW%%NAME% %BLUE%LLD %PURPLE%[%SOCKETS%]
 
-//Throwing LLD IMBUE
-//ItemDisplay[NMAG (7tk OR 7bk OR 9tk OR 9bk OR tkf OR bkf) !ETH !ID]: %YELLOW%%NAME%
-//ItemDisplay[NMAG (7tk OR 7bk OR 9tk OR 9bk OR tkf OR bkf) ETH !ID]: ETH %YELLOW%%NAME%
+ItemDisplay[NMAG pa4 ED>0 AR>0 !ETH SOCK=0]: %YELLOW%%NAME% %BLUE%LLD %RED%[%SOCKETS%]
+ItemDisplay[NMAG pa4 ED>0 AR>0 !ETH SOCK=4]: %YELLOW%%NAME% %BLUE%LLD %PURPLE%[%SOCKETS%]
+
+////Throwing LLD IMBUE
+
+//War javs ETH
+ItemDisplay[NMAG 9ja ETH !ID]: ETH %YELLOW%%NAME%
 
 ItemDisplay[ILVL>0 ILVL<34 NORM RARE !ID (ARMOR OR WEAPON)]: %NAME%
 //RARES (Norm nonclass items hidden)
@@ -1223,8 +1227,8 @@ ItemDisplay[CL3 ELT ETH NMAG RES=43 (SOCK=0 OR SOCK=3 OR SOCK=4)]: %dark_green%E
 ItemDisplay[CL3 ELT ETH NMAG RES=44 (SOCK=0 OR SOCK=3 OR SOCK=4)]: %dark_green%ETH %NAME%%BLUE% 44+ %RED%[%SOCKETS%]
 ItemDisplay[CL3 ELT ETH NMAG RES=45 (SOCK=0 OR SOCK=3 OR SOCK=4)]: %dark_green%ETH %NAME%%BLUE% 45+ %PURPLE%[%SOCKETS%]
 //ED paladin shields
-ItemDisplay[CL3 ELT !ETH NMAG ITEMSTAT68>119 !SOCK=1]: %dark_green%%NAME%%BLUE% 120+AR %YELLOW%[%SOCKETS%]
-ItemDisplay[CL3 ELT ETH NMAG ITEMSTAT68>119 (SOCK=0 OR SOCK=3)]: %dark_green%ETH %NAME%%BLUE% 120+AR %RED%[%SOCKETS%]
+ItemDisplay[CL3 ELT !ETH NMAG AR>119 !SOCK=1]: %dark_green%%NAME%%BLUE% 120+AR %YELLOW%[%SOCKETS%]
+ItemDisplay[CL3 ELT ETH NMAG AR>119 (SOCK=0 OR SOCK=3)]: %dark_green%ETH %NAME%%BLUE% 120+AR %RED%[%SOCKETS%]
 //
 ItemDisplay[CL3 !ETH NMAG RES<35 RES>19 !SOCK=1]: %NAME% %GRAY%[%SOCKETS%]
 ItemDisplay[CL3 !ETH NMAG RES<20 RES>0 SOCK=4]: %NAME% %GRAY%[%SOCKETS%]
